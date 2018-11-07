@@ -31,7 +31,6 @@
         <activity
             android:name=".Login"
             android:theme="@style/AppTheme.Dark" />
-        <activity android:name=".AnhCuaToi" />
         <activity android:name=".Search" />
         <!-- <activity -->
         <!-- android:name=".Man_Hinh_Chinh" -->
@@ -43,7 +42,11 @@
 
 
         <!-- <activity android:name=".SignupActivity" android:theme="@style/AppTheme.Dark" /> -->
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" />
+        <activity
+            android:name=".Anhcuatoi_activity"
+            android:label="@string/title_activity_anhcuatoi_activity"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

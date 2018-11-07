@@ -43,13 +43,14 @@ public class SignupActivity extends AppCompatActivity {
                 // Finish the registration screen and return to the Login activity
                 Intent intentLinkLogin = new Intent(SignupActivity.this,Login.class);
                 startActivity(intentLinkLogin);
+                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
             }
         });
     }
 
     public void signup() {
         Log.d(TAG, "Signup");
-        Intent intent3 = new Intent(SignupActivity.this,Man_Hinh_Chinh.class);
+        Intent intent3 = new Intent(SignupActivity.this,Login.class);
         startActivity(intent3);
         if (!validate()) {
             onSignupFailed();

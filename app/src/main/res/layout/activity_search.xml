@@ -36,7 +36,7 @@
             android:id="@+id/imgbtnLogin_Sesrch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_group_add_black_24dp" />
+            android:src="@drawable/ic_person_black_24dp" />
         <ImageButton
             android:layout_marginTop="5dp"
             android:layout_marginLeft="15dp"
