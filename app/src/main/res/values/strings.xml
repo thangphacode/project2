@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DuAn1</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="search_to">Từ khoá bạn nhập phải bằng tiếng việt có dấu , không chứa ký tự đặc biệt như !, @, # ...</string>
+    <string name="title_activity_man__hinh__chinh">Man_Hinh_Chinh</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Nguyễn Văn Vinh</string>
+    <string name="nav_header_subtitle">NguyenVinhh997@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>

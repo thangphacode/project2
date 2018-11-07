@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/anh3"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_man__hinh__chinh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:background="#ffff"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_man__hinh__chinh"
+        app:menu="@menu/activity_man__hinh__chinh_drawer" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:background="#6ba9c7"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/popup_ManChinh"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_view_headline_black_24dp" />
+            <TextView
+                android:textColor="#343634"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:textSize="25dp"
+                android:text="Tổng Hợp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="67dp"
+                android:id="@+id/imgbtnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_group_add_black_24dp" />
+            <ImageButton
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/imgbtnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_black_24dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="#377c49"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="#e7e1e1"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/tvThuVien"
+                android:text="Thư Viện"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:clickable="true"
+                android:onClick="perform_action"
+                tools:ignore="OnClick" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="#e7e1e1"
+                android:id="@+id/tvAnh_Noi_Bat"
+                android:text="Ảnh Nổi Bật "
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:clickable="true"
+                android:onClick="Anh_Noi_Bat"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="#e7e1e1"
+                android:id="@+id/tvMoiNhat"
+                android:text="Mới Nhất"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:clickable="true"
+                android:onClick="Moi_Nhat"/>
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textColor="#e7e1e1"
+                android:id="@+id/tvAnhCuaToi"
+                android:text="Ảnh Của Tôi"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:clickable="true"
+                android:onClick="Anh_Cua_Toi"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ListView
+                android:id="@+id/lvManChinh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

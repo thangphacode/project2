@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_favorti"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Favorite" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="History" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Setting" />
+    </group>
+
+    <item android:title="All">
+        <menu>
+            <item
+                android:id="@+id/nav_tainhieunhat"
+                android:title="Tải Nhiều Nhất" />
+            <item
+                android:id="@+id/nav_thiennhien"
+                android:title="Thiên Nhiên" />
+            <item
+                android:id="@+id/nav_dongvat"
+                android:title="Động Vât" />
+            <item
+                android:id="@+id/nav_connguoi"
+                android:title="Con Người" />
+            <item
+                android:id="@+id/nav_sacmau"
+                android:title="Sắc Màu" />
+            <item
+                android:id="@+id/nav_thanhpho"
+                android:title="Thành Phố" />
+            <item
+                android:id="@+id/nav_tinhyeu"
+                android:title="Tình Yêu" />
+        </menu>
+    </item>
+
+</menu>
