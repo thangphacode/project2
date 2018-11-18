@@ -15,7 +15,7 @@
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-        android:background="#ffff"
+        android:background="#e1d6d6"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:background="#6ba9c7"
+            android:background="#d1d8da"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="60dp">
@@ -63,15 +63,16 @@
                 android:src="@drawable/ic_search_black_24dp" />
         </LinearLayout>
         <LinearLayout
-            android:background="#377c49"
+            android:background="#4ca2ae"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="30dp">
             <TextView
+
                 android:layout_weight="1"
                 android:layout_marginTop="5dp"
                 android:textColor="#e7e1e1"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="120dp"
                 android:id="@+id/tvThêm"
                 android:text="Thêm"
                 android:layout_width="80dp"
@@ -81,17 +82,7 @@
                 android:onClick="perform_action"
                 tools:ignore="OnClick" />
             <TextView
-                android:layout_weight="0.5"
-                android:layout_marginTop="5dp"
-                android:textColor="#e7e1e1"
-                android:id="@+id/tvSua"
-                android:text="Sửa "
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:textSize="15dp"
-                android:clickable="true"
-                android:onClick="Anh_Noi_Bat"/>
-            <TextView
+                android:layout_weight="1"
                 android:layout_marginTop="5dp"
                 android:textColor="#e7e1e1"
                 android:id="@+id/tvXoa"

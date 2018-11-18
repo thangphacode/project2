@@ -5,6 +5,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,8 +21,17 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import k.com.duan1.Adapter.MyAdapter;
+import k.com.duan1.database.FlowerData;
+
 public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private ImageButton imgbtnLogin, imgbtnSearch;
+    RecyclerView mRecyclerView;
+    List<FlowerData> mFlowerList;
+    FlowerData mFlowerData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +40,31 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         imgbtnLogin = (ImageButton) findViewById(R.id.imgbtnLogin);
         imgbtnSearch = (ImageButton) findViewById(R.id.imgbtnSearch);
+        mRecyclerView = findViewById(R.id.recyclerview);
+
+        GridLayoutManager mGridLayoutManager = new GridLayoutManager(Man_Hinh_Chinh.this, 2);
+        mRecyclerView.setLayoutManager(mGridLayoutManager);
+        mFlowerList = new ArrayList<>();
+        mFlowerData = new FlowerData("Tải Nhiều Nhất", getString(R.string.description_flower_rose),
+                R.drawable.tainhieunhat);
+        mFlowerList.add(mFlowerData);
+        mFlowerData = new FlowerData("Thiên Nhiên", getString(R.string.description_flower_carnation),
+                R.drawable.thiennhien);
+        mFlowerList.add(mFlowerData);
+        mFlowerData = new FlowerData("Sắc Màu", getString(R.string.description_flower_daisy),
+                R.drawable.sacmau);
+        mFlowerList.add(mFlowerData);
+        mFlowerData = new FlowerData("Tình Yêu", getString(R.string.description_flower_daffodil),
+                R.drawable.tinhyeu);
+        mFlowerList.add(mFlowerData);
+        mFlowerData = new FlowerData("Thành Phố", getString(R.string.description_flower_sunflower),
+                R.drawable.thanhpho3);
+        mFlowerList.add(mFlowerData);
+        mFlowerData = new FlowerData("Động Vật", getString(R.string.description_flower_tulip),
+                R.drawable.dongvat);
+        mFlowerList.add(mFlowerData);
+        MyAdapter myAdapter = new MyAdapter(Man_Hinh_Chinh.this, mFlowerList);
+        mRecyclerView.setAdapter(myAdapter);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -110,8 +146,6 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
         } else if (id == R.id.nav_history) {
 
         } else if (id == R.id.nav_setting) {
-
-        } else if (id == R.id.nav_connguoi) {
 
         } else if (id == R.id.nav_dongvat) {
 

@@ -1,9 +1,9 @@
 package k.com.duan1;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class Search extends AppCompatActivity {
+public class Search extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -86,8 +86,6 @@ public class Anhcuatoi_activity extends AppCompatActivity
 
         } else if (id == R.id.nav_setting) {
 
-        } else if (id == R.id.nav_connguoi) {
-
         } else if (id == R.id.nav_dongvat) {
 
         } else if (id == R.id.nav_sacmau) {

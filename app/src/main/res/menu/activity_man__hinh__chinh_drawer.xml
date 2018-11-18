@@ -30,9 +30,6 @@
                 android:id="@+id/nav_dongvat"
                 android:title="Động Vât" />
             <item
-                android:id="@+id/nav_connguoi"
-                android:title="Con Người" />
-            <item
                 android:id="@+id/nav_sacmau"
                 android:title="Sắc Màu" />
             <item

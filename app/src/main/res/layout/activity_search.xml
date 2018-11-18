@@ -6,75 +6,78 @@
     android:layout_height="match_parent"
     android:background="@drawable/anh3"
     tools:context=".Search">
+
+
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout
-        android:background="#6ba9c7"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="60dp">
-        <ImageView
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_view_headline_black_24dp" />
-        <TextView
-            android:textColor="#343634"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="15dp"
-            android:textSize="20dp"
-            android:text="Ảnh Của Tôi"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="67dp"
-            android:id="@+id/imgbtnLogin_Sesrch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_person_black_24dp" />
-        <ImageButton
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:id="@+id/imgbtnSearch_Search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_search_black_24dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="vertical">
-    <EditText
-        android:layout_marginTop="10dp"
-        android:textSize="12dp"
-        android:background="@drawable/duongvien_goctron"
-        android:layout_gravity="center"
-        android:hint="Nhập thông tin cần tìm kiếm ...."
-        android:id="@+id/edNhapTimKiem_Search"
-        android:layout_width="355dp"
-        android:layout_height="50dp" />
-        <TextView
-            android:layout_margin="11dp"
-            android:paddingTop="2dp"
-            android:textColor="#FF3333"
+        <LinearLayout
+            android:background="#6ba9c7"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="2dp"
-            android:text="@string/search_to" />
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_view_headline_black_24dp" />
+            <TextView
+                android:textColor="#343634"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:text="Ảnh Của Tôi"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
 
-        <Button
-            android:background="@drawable/bogoc_button_login"
-            android:layout_gravity="center"
-            android:text="Tìm Kiếm"
-            android:id="@+id/btnTimkiem_Search"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            <ImageButton
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="67dp"
+                android:id="@+id/imgbtnLogin_Sesrch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_person_black_24dp" />
+            <ImageButton
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="15dp"
+                android:id="@+id/imgbtnSearch_Search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search_black_24dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_marginTop="10dp"
+                android:textSize="12dp"
+                android:background="@drawable/duongvien_goctron"
+                android:layout_gravity="center"
+                android:hint="Nhập thông tin cần tìm kiếm ...."
+                android:id="@+id/edNhapTimKiem_Search"
+                android:layout_width="355dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:layout_margin="11dp"
+                android:paddingTop="2dp"
+                android:textColor="#FF3333"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="@string/search_to" />
+
+            <Button
+                android:background="@drawable/bogoc_button_login"
+                android:layout_gravity="center"
+                android:text="Tìm Kiếm"
+                android:id="@+id/btnTimkiem_Search"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
         <ListView
             android:id="@+id/lvSearch"
             android:layout_width="match_parent"
