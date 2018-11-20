@@ -4,11 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -16,22 +13,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import k.com.duan1.Adapter.MyAdapter;
-import k.com.duan1.database.FlowerData;
+import k.com.duan1.Adapter.CustomAdapter;
 
 public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private ImageButton imgbtnLogin, imgbtnSearch;
-    RecyclerView mRecyclerView;
-    List<FlowerData> mFlowerList;
-    FlowerData mFlowerData;
+    GridView simpleGrid;
+    int logos[] = {R.drawable.tainhieunhat, R.drawable.thanhpho2,
+            R.drawable.thiennhien, R.drawable.tinhyeu,
+            R.drawable.dongvat, R.drawable.sacmau,};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,31 +37,19 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         imgbtnLogin = (ImageButton) findViewById(R.id.imgbtnLogin);
         imgbtnSearch = (ImageButton) findViewById(R.id.imgbtnSearch);
-        mRecyclerView = findViewById(R.id.recyclerview);
+        simpleGrid = (GridView) findViewById(R.id.simpleGridView); // init GridView
 
-        GridLayoutManager mGridLayoutManager = new GridLayoutManager(Man_Hinh_Chinh.this, 2);
-        mRecyclerView.setLayoutManager(mGridLayoutManager);
-        mFlowerList = new ArrayList<>();
-        mFlowerData = new FlowerData("Tải Nhiều Nhất", getString(R.string.description_flower_rose),
-                R.drawable.tainhieunhat);
-        mFlowerList.add(mFlowerData);
-        mFlowerData = new FlowerData("Thiên Nhiên", getString(R.string.description_flower_carnation),
-                R.drawable.thiennhien);
-        mFlowerList.add(mFlowerData);
-        mFlowerData = new FlowerData("Sắc Màu", getString(R.string.description_flower_daisy),
-                R.drawable.sacmau);
-        mFlowerList.add(mFlowerData);
-        mFlowerData = new FlowerData("Tình Yêu", getString(R.string.description_flower_daffodil),
-                R.drawable.tinhyeu);
-        mFlowerList.add(mFlowerData);
-        mFlowerData = new FlowerData("Thành Phố", getString(R.string.description_flower_sunflower),
-                R.drawable.thanhpho3);
-        mFlowerList.add(mFlowerData);
-        mFlowerData = new FlowerData("Động Vật", getString(R.string.description_flower_tulip),
-                R.drawable.dongvat);
-        mFlowerList.add(mFlowerData);
-        MyAdapter myAdapter = new MyAdapter(Man_Hinh_Chinh.this, mFlowerList);
-        mRecyclerView.setAdapter(myAdapter);
+        CustomAdapter customAdapter = new CustomAdapter(getApplicationContext(), logos);
+        simpleGrid.setAdapter(customAdapter);
+        simpleGrid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+                                    long arg3) {
+                Intent intent = new Intent(Man_Hinh_Chinh.this, ActivitySecond.class);
+                intent.putExtra("image", logos[arg2]);
+                startActivity(intent);
+            }
+        });
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +59,6 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
                         .setAction("Action", null).show();
             }
         });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -141,13 +125,7 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_favorti) {
-            // Handle the camera action
-        } else if (id == R.id.nav_history) {
-
-        } else if (id == R.id.nav_setting) {
-
-        } else if (id == R.id.nav_dongvat) {
+        if (id == R.id.nav_dongvat) {
 
         } else if (id == R.id.nav_sacmau) {
 
@@ -193,11 +171,8 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
 
             @Override
             public void onClick(View v) {
-////Creating the instance of PopupMenu
                 PopupMenu popup = new PopupMenu(Man_Hinh_Chinh.this, tv);
-////Inflating the Popup using xml file
                 popup.getMenuInflater().inflate(R.menu.menu_main, popup.getMenu());
-//////registering popup with OnMenuItemClickListener
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
                         Toast.makeText(Man_Hinh_Chinh.this, "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();

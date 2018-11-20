@@ -12,7 +12,8 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_anhcuatoi_activity">Anhcuatoi_activity</string>
     <!--<string name="app_name">Vinh's first app</string>-->
-    <string name="FACEBOOK_APP_ID">492650764565027</string>
+    <string name="FACEBOOK_APP_ID">255771535101955</string>
+    <string name="facebook_login_protocol_scheme">fb255771535101955</string>
     <string name="ACCOUNT_KIT_CLIENT_TOKEN">[ACCOUNT_KIT_CLIENT_TOKEN]</string>
 
     <string name="description_flower_rose">A rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over a hundred species and thousands of cultivars.</string>

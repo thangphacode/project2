@@ -80,13 +80,7 @@ public class Anhcuatoi_activity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_favorti) {
-            // Handle the camera action
-        } else if (id == R.id.nav_history) {
-
-        } else if (id == R.id.nav_setting) {
-
-        } else if (id == R.id.nav_dongvat) {
+        if (id == R.id.nav_dongvat) {
 
         } else if (id == R.id.nav_sacmau) {
 
