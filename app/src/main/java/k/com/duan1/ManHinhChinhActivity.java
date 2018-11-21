@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 import k.com.duan1.Adapter.CustomAdapter;
 
-public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class ManHinhChinhActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private ImageButton imgbtnLogin, imgbtnSearch;
     GridView simpleGrid;
     int logos[] = {R.drawable.thanhpho2,R.drawable.sacmau,
@@ -33,7 +33,7 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_man__hinh__chinh);
+        setContentView(R.layout.activity_manhinhchinh);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         imgbtnLogin = (ImageButton) findViewById(R.id.imgbtnLogin);
         imgbtnSearch = (ImageButton) findViewById(R.id.imgbtnSearch);
@@ -45,7 +45,7 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
                                     long arg3) {
-                Intent intent = new Intent(Man_Hinh_Chinh.this, ActivitySecond.class);
+                Intent intent = new Intent(ManHinhChinhActivity.this, ActivitySecond.class);
                 intent.putExtra("image", logos[arg2]);
                 startActivity(intent);
             }
@@ -72,7 +72,7 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent intentLogin = new Intent(Man_Hinh_Chinh.this, Login.class);
+                Intent intentLogin = new Intent(ManHinhChinhActivity.this, LoginActivity.class);
                 startActivity(intentLogin);
             }
         });
@@ -81,7 +81,7 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                Intent intentSearch = new Intent(Man_Hinh_Chinh.this, Search.class);
+                Intent intentSearch = new Intent(ManHinhChinhActivity.this, SearchActivity.class);
                 startActivity(intentSearch);
             }
         });
@@ -161,7 +161,7 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
 
     public void Anh_Cua_Toi(View view) {
         TextView tv = (TextView) findViewById(R.id.tvAnhCuaToi);
-        Intent intentAnhCuaToi = new Intent(Man_Hinh_Chinh.this, Anhcuatoi_activity.class);
+        Intent intentAnhCuaToi = new Intent(ManHinhChinhActivity.this, AnhcuatoiActivity.class);
         startActivity(intentAnhCuaToi);
     }
 
@@ -171,11 +171,11 @@ public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.
 
             @Override
             public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(Man_Hinh_Chinh.this, tv);
+                PopupMenu popup = new PopupMenu(ManHinhChinhActivity.this, tv);
                 popup.getMenuInflater().inflate(R.menu.menu_main, popup.getMenu());
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(Man_Hinh_Chinh.this, "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ManHinhChinhActivity.this, "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
                         return true;
                     }
                 });

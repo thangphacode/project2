@@ -16,7 +16,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
 
@@ -57,7 +57,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void login() {
-        Log.d(TAG, "Login");
+        Log.d(TAG, "LoginActivity");
 
         if (!validate()) {
             onLoginFailed();
@@ -66,7 +66,7 @@ public class Login extends AppCompatActivity {
 
         _loginButton.setEnabled(false);
 
-        final ProgressDialog progressDialog = new ProgressDialog(Login.this,
+        final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
                 R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
         progressDialog.setMessage("Authenticating...");
@@ -86,7 +86,7 @@ public class Login extends AppCompatActivity {
                         progressDialog.dismiss();
                     }
                 }, 4000);
-        Intent intentDN_ManHinhChinh = new Intent(Login.this, MainActivity.class);
+        Intent intentDN_ManHinhChinh = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intentDN_ManHinhChinh);
 
     }
@@ -116,7 +116,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "LoginActivity failed", Toast.LENGTH_LONG).show();
 
         _loginButton.setEnabled(true);
     }

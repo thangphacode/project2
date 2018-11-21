@@ -33,7 +33,7 @@ import k.com.duan1.Adapter.AnhcuatoiAdapter;
 import k.com.duan1.AnhCuaToi.AnhCuaToi;
 import k.com.duan1.Database.Database;
 
-public class Anhcuatoi_activity extends AppCompatActivity
+public class AnhcuatoiActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Button btnAdd, btnCanel;
@@ -50,7 +50,7 @@ public class Anhcuatoi_activity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anhcuatoi_activity);
+        setContentView(R.layout.activity_anhcuatoi);
         lvAncuatoi = (ListView) findViewById(R.id.lvAnhCuaToi);
         arrayAnhCuaToi = new ArrayList<>();
         adapter = new AnhcuatoiAdapter(this,R.layout.dong_anhcuatoi,arrayAnhCuaToi);
@@ -101,12 +101,12 @@ public class Anhcuatoi_activity extends AppCompatActivity
                 ByteArrayOutputStream byteArray = new ByteArrayOutputStream();
                 bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArray);
                 byte[] hinhAnh = byteArray.toByteArray();
-                Anhcuatoi_activity.database.INSERT_AnhCuaToi(
+                AnhcuatoiActivity.database.INSERT_AnhCuaToi(
                         edtTen.getText().toString().trim(),
                         edtMoTa.getText().toString().trim(),
                         hinhAnh
                 );
-                Toast.makeText(Anhcuatoi_activity.this, "Đã Thêm", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AnhcuatoiActivity.this, "Đã Thêm", Toast.LENGTH_SHORT).show();
             }
         });
         ibtnCamera.setOnClickListener(new View.OnClickListener() {

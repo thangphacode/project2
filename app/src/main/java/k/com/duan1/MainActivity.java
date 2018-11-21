@@ -31,17 +31,18 @@ public class MainActivity extends AppCompatActivity {
         //dasdasd
         //lll
         //Dùng cài đặt sau 5 giây màn hình tự chuyển
+
         Thread bamgio=new Thread(){
             public void run()
             {
                 try {
-                    sleep(3000);
+                    sleep(5000);
                 } catch (Exception e) {
 
                 }
                 finally
                 {
-                    Intent activitymoi=new Intent(MainActivity.this,Man_Hinh_Chinh.class);
+                    Intent activitymoi=new Intent(MainActivity.this,ManHinhChinhActivity.class);
                     startActivity(activitymoi);
                 }
             }
