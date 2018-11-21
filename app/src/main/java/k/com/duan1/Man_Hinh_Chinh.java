@@ -26,9 +26,9 @@ import k.com.duan1.Adapter.CustomAdapter;
 public class Man_Hinh_Chinh extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private ImageButton imgbtnLogin, imgbtnSearch;
     GridView simpleGrid;
-    int logos[] = {R.drawable.tainhieunhat, R.drawable.thanhpho2,
+    int logos[] = {R.drawable.thanhpho2,R.drawable.sacmau,
             R.drawable.thiennhien, R.drawable.tinhyeu,
-            R.drawable.dongvat, R.drawable.sacmau,};
+            R.drawable.dongvat, R.drawable.tainhieunhat2,};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
